@@ -1,0 +1,8 @@
+<!-- Once the form is complete, request method is post, 
+    the location where the form is posted to is defined in action,
+    which is not hardcoded, but using the app name ('twitter') and the 'route name' ('signup') -->
+<form method="post" action="{% url 'twitter:signup' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Sign Up"> 
+</form>

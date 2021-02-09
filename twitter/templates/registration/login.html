@@ -1,0 +1,11 @@
+{% if form.errors %}
+<p> error </p>
+{% endif %}
+
+<form method="POST" action="{% url 'login' %}">
+    {% csrf_token %}
+    {{ form }}
+
+    <input type = "submit" value="login">
+    <input type = "submit" value="login2">
+</form>
